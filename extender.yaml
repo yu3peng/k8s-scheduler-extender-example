@@ -102,9 +102,11 @@ spec:
         imagePullPolicy: IfNotPresent
         args:
         - kube-scheduler
+        # 在启动参数中指定--config=/my-scheduler/config.yaml
         - --config=/my-scheduler/config.yaml
         - -v=4
         volumeMounts:
+        # 将configmaps：my-scheduler-config以文件的形式挂载到容器内/my-scheduler目录下
         - name: my-scheduler-config
           mountPath: /my-scheduler
       - name: my-scheduler-extender-ctr
