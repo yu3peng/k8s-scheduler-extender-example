@@ -17,7 +17,6 @@ $ git submodule update --init
 $ IMAGE=YOUR_ORG/YOUR_IMAGE:YOUR_TAG
 
 $ docker build . -t "${IMAGE}"
-$ docker push "${IMAGE}"
 ```
 
 ### 2. deploy `my-scheduler` in `kube-system` namespace
