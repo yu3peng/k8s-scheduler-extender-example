@@ -16,7 +16,8 @@ $ git submodule update --init
 ### 1. buid a docker image
 
 ```
-$ IMAGE=YOUR_ORG/YOUR_IMAGE:YOUR_TAG
+# IMAGE=YOUR_ORG/YOUR_IMAGE:YOUR_TAG
+$ IMAGE=yp/yp:1.0.0
 
 $ docker build . -t "${IMAGE}"
 ```
