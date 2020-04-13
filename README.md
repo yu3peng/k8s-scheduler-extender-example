@@ -32,13 +32,11 @@ $ sed 's/a\/b:c/'$(echo "${IMAGE}" | sed 's/\//\\\//')'/' extender.yaml | kubect
 For ease of observation, start streaming logs from the extender:
 
 ```console
-$ kubectl -n kube-system logs deploy/my-scheduler -c my-scheduler-extender-ctr -f
+$ kubectl -n kube-system logs deploy/my-scheduler -c my-scheduler-extender-ctr -f &
 [  warn ] 2018/11/07 08:41:40 main.go:84: LOG_LEVEL="" is empty or invalid, fallling back to "INFO".
 [  info ] 2018/11/07 08:41:40 main.go:98: Log level was set to INFO
 [  info ] 2018/11/07 08:41:40 main.go:116: server starting on the port :80
 ```
-
-Open up an another termianl and proceed.
 
 ### 3. schedule test pod
 
