@@ -8,7 +8,7 @@ This is an example of [Kubernetes Scheduler Extender](https://github.com/kuberne
 [Install Kubernetes on Ubuntu](https://github.com/yu3peng/ubuntu-Kubernetes)
 
 ```shell
-$ git clone git@github.com:everpeace/k8s-scheduler-extender-example.git
+$ git clone https://github.com/yu3peng/k8s-scheduler-extender-example.git
 $ cd k8s-scheduler-extender-example
 $ git submodule update --init
 ```
