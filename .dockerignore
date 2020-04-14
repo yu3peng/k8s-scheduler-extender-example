@@ -1,2 +1,4 @@
+# 应用于 docker 镜像的构建, 排除不需要上传到 docker 服务端的文件或目录。
+# 支持正则和通配符
 .git
 .gitignore
