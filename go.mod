@@ -2,6 +2,7 @@ module k8s-scheduler-extender-example
 
 go 1.13
 
+// 在go modules中使用replace替换无法直接获取的package（golang.org/x/...）
 replace (
 	k8s.io/api => k8s.io/api v0.17.0
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.17.0
@@ -26,6 +27,7 @@ replace (
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.17.0
 )
 
+// require 就是需要的所有依赖包,在每个依赖包的后面已经表明了版本号
 require (
 	github.com/comail/colog v0.0.0-20160416085026-fba8e7b1f46c
 	github.com/julienschmidt/httprouter v1.3.0
