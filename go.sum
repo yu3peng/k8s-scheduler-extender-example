@@ -1,3 +1,13 @@
+// [谈谈go.sum](https://studygolang.com/articles/25658)
+// go.sum 的本意在于提供防篡改的保障
+// Go 在做依赖管理时会创建两个文件，go.mod 和 go.sum
+// go.sum 的每一行都是一个条目，大致是这样的格式：
+// <module> <version>/go.mod <hash>
+// 其中module是依赖的路径，version是依赖的版本号。hash是以h1:开头的字符串，表示生成checksum的算法是第一版的hash算法（sha256）
+// 之所以 Go 会在依赖管理时引入 go.sum 这样的角色，是为了实现下面的目标：
+//（1）提供分布式环境下的包管理依赖内容校验
+// （2）作为 transparent log 来加强安全性
+
 bitbucket.org/bertimus9/systemstat v0.0.0-20180207000608-0eeff89b0690/go.mod h1:Ulb78X89vxKYgdL24HMTiXYHlyHEvruOj1ZPlqeNEZM=
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
