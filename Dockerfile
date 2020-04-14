@@ -17,6 +17,7 @@ ENV GOARCH=amd64
 WORKDIR /go/src/k8s-scheduler-extender-example
 COPY go.mod .
 COPY go.sum .
+# go mod download可以下载所需要的依赖，但是依赖并不是下载到$GOPATH中，而是$GOPATH/pkg/mod中，多个项目可以共享缓存的module。
 RUN GO111MODULE=on go mod download
 COPY . .
 RUN go install -ldflags "-s -w -X main.version=$VERSION" k8s-scheduler-extender-example
