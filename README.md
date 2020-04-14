@@ -20,7 +20,6 @@ $ git submodule update --init
 $ IMAGE=yu3peng/k8s-scheduler-extender-example:v1.0.0
 
 $ docker build . -t "${IMAGE}"
-$ docker push "${IMAGE}"
 ```
 
 ### 2. deploy `my-scheduler` in `kube-system` namespace
