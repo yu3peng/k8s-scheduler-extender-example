@@ -20,6 +20,7 @@ COPY go.sum .
 # go mod download可以下载所需要的依赖，但是依赖并不是下载到$GOPATH中，而是$GOPATH/pkg/mod中，多个项目可以共享缓存的module。
 RUN GO111MODULE=on go mod download
 COPY . .
+# [Using ldflags to Set Version Information for Go Applications](https://www.digitalocean.com/community/tutorials/using-ldflags-to-set-version-information-for-go-applications)
 # 在构建时将动态信息插入二进制文件中
 # 在此标志中，ld代表链接程序，该程序将已编译源代码的不同部分链接到最终二进制文件中。 
 # ldflags代表链接器标志。
