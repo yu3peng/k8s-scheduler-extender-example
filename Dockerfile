@@ -20,6 +20,10 @@ COPY go.sum .
 # go mod download可以下载所需要的依赖，但是依赖并不是下载到$GOPATH中，而是$GOPATH/pkg/mod中，多个项目可以共享缓存的module。
 RUN GO111MODULE=on go mod download
 COPY . .
+# 在构建时将动态信息插入二进制文件中
+# 在此标志中，ld代表链接程序，该程序将已编译源代码的不同部分链接到最终二进制文件中。 
+# ldflags代表链接器标志。
+# 之所以这样称呼，是因为它向基础Go工具链链接器cmd / link传递了一个标志，该标志使您可以在构建时从命令行更改导入的软件包的值
 RUN go install -ldflags "-s -w -X main.version=$VERSION" k8s-scheduler-extender-example
 
 # runtime image
