@@ -29,7 +29,9 @@ replace (
 
 // require 就是需要的所有依赖包,在每个依赖包的后面已经表明了版本号
 require (
+        // 取的版本为 https://github.com/comail/colog/commit/fba8e7b1f46c3607f09760ce3880066e7ff57c5a
 	github.com/comail/colog v0.0.0-20160416085026-fba8e7b1f46c
+        // 取的版本为 https://github.com/julienschmidt/httprouter/tree/v1.3.0
 	github.com/julienschmidt/httprouter v1.3.0
 	k8s.io/api v0.17.0
 	k8s.io/apimachinery v0.17.0
