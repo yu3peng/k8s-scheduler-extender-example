@@ -2,3 +2,7 @@
 # 支持正则和通配符
 .git
 .gitignore
+*.md
+!README*.md
+README-secret.md
+# 这么写的意思是将根路径下所有以 .md 结尾的文件排除，以 README 开头 .md 结尾的文件保留，但是 README-secret.md 文件排除。
