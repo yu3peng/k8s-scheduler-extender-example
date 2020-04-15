@@ -98,6 +98,8 @@ spec:
           name: my-scheduler-config
       containers:
       - name: my-scheduler-ctr
+        # hyperkube是Kubernetes的allinone binary，可以用来启动多种kubernetes服务，常用在Docker镜像中
+        # 每个Kubernetes发布都会同时发布一个包含hyperkube的docker镜像, hyperkube支持的子命令包括: kubelet、kubectl、apiserver等
         image: gcr.io/google_containers/hyperkube:v1.16.3
         imagePullPolicy: IfNotPresent
         args:
