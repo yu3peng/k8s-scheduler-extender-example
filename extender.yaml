@@ -62,7 +62,7 @@ data:
       {"name" : "EqualPriority", "weight" : 1}
     ],
     "extenders" : [{
-      "urlPrefix": "http://localhost/scheduler",
+      "urlPrefix": "http://localhost/schedulerext",
       "filterVerb": "predicates/always_true",
       "prioritizeVerb": "priorities/zero_score",
       "preemptVerb": "preemption",
