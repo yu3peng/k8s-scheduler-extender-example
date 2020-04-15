@@ -17,7 +17,7 @@ import (
 
 const (
 	versionPath      = "/version"
-	apiPrefix        = "/scheduler"
+	apiPrefix        = "/schedulerext"
 	bindPath         = apiPrefix + "/bind"
 	preemptionPath   = apiPrefix + "/preemption"
 	predicatesPrefix = apiPrefix + "/predicates"
