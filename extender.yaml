@@ -45,7 +45,7 @@ metadata:
   name: my-scheduler-policy
   namespace: kube-system
 data:
-# 扩展调度器的策略
+ # 在多调度器里面的扩展调度器的策略
  policy.cfg : |
   {
     "kind" : "Policy",
