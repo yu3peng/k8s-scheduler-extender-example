@@ -27,6 +27,7 @@ data:
   config.yaml: |
     apiVersion: kubescheduler.config.k8s.io/v1alpha1
     kind: KubeSchedulerConfiguration
+    # 多调度器
     schedulerName: my-scheduler
     algorithmSource:
       policy:
@@ -44,6 +45,7 @@ metadata:
   name: my-scheduler-policy
   namespace: kube-system
 data:
+# 扩展调度器的策略
  policy.cfg : |
   {
     "kind" : "Policy",
