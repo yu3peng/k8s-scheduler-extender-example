@@ -104,7 +104,7 @@ spec:
         imagePullPolicy: IfNotPresent
         args:
         - kube-scheduler
-        # 在启动参数中指定--config=/my-scheduler/config.yaml，那么就只启动相关的功能，此处是调度器扩展功能。
+        # 在启动参数中指定--config=/my-scheduler/config.yaml，那么 hyperkube 就只启动相关的功能，此处是调度器扩展功能。
         - --config=/my-scheduler/config.yaml
         - -v=4
         volumeMounts:
